@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Start Screen -->
+        <div id="startScreen" class="screen active">
+            <div class="content">
+                <h1>Welcome to Quiz Master</h1>
+                <p>Test your knowledge with our comprehensive quiz!</p>
+                <div class="quiz-info">
+                    <span>📚 8 Questions</span>
+                    <span>⏱️ No Time Limit</span>
+                    <span>🎯 Multiple Question Types</span>
+                </div>
+                <button id="startBtn" class="btn btn-primary">Start Quiz</button>
+            </div>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quizScreen" class="screen">
+            <div class="quiz-header">
+                <h2 id="questionNumber">Question 1 of 8</h2>
+                <div class="progress-bar">
+                    <div id="progressFill" class="progress-fill"></div>
+                </div>
+            </div>
+
+            <div class="quiz-content">
+                <h3 id="questionText"></h3>
+                
+                <!-- Multiple Choice -->
+                <div id="multipleChoice" class="question-type">
+                    <div id="optionsContainer" class="options"></div>
+                </div>
+
+                <!-- True/False -->
+                <div id="trueFalse" class="question-type">
+                    <div class="boolean-options">
+                        <button class="btn btn-option" data-answer="true">True</button>
+                        <button class="btn btn-option" data-answer="false">False</button>
+                    </div>
+                </div>
+
+                <!-- Matching -->
+                <div id="matching" class="question-type">
+                    <div id="matchingContainer" class="matching-container"></div>
+                </div>
+            </div>
+
+            <div class="quiz-footer">
+                <button id="prevBtn" class="btn btn-secondary">← Previous</button>
+                <button id="nextBtn" class="btn btn-primary">Next →</button>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="resultsScreen" class="screen">
+            <div class="results-content">
+                <h1>Quiz Complete!</h1>
+                
+                <div class="score-display">
+                    <div class="score-circle">
+                        <div class="score-text">
+                            <span id="finalScore" class="score-number">0</span>
+                            <span class="score-label">/ 8</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="results-message">
+                    <p id="resultMessage"></p>
+                </div>
+
+                <div class="results-breakdown">
+                    <h3>Your Answers:</h3>
+                    <div id="reviewContainer" class="review-container"></div>
+                </div>
+
+                <button id="restartBtn" class="btn btn-primary">Retake Quiz</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
