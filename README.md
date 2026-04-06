@@ -45,9 +45,6 @@ quiz-app/
 
 ---
 
-## 📸 Screenshots
-
-*(Add screenshots here if available)*
 
 ---
 
@@ -55,7 +52,7 @@ quiz-app/
 
 * Add difficulty levels
 * Store high scores using local storage/database
-* Add categories (Science, Math, etc.)
+
 * Improve UI with animations
 
 ---
